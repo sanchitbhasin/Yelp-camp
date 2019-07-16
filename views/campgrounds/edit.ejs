@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+
+<form action="/camps/<%= camp._id %>?_method=PUT" method="POST">
+    <div class="container">
+        <h3 class="display-4" style="text-align: center; margin: 50px">Edit <%= camp.name %></h3>
+        <div style="width: 30%; margin: 0 auto">
+            <div class="form-group">
+                <input type="text" value="<%= camp.name %>" name="camp[name]" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="number" value="<%= camp.price %>" name="camp[price]" class="form-control" min="0.01" step="0.01">
+            </div>
+            <div class="form-group">
+                <input type="url" name="camp[image]" value="<%= camp.image %>" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="camp[description]" value="<%= camp.description %>" class="form-control">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                <a href="/camps">go back...</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<% include ../partials/footer %> 

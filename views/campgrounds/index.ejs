@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4" id="camptitle">CAMPGROUND</h1>
+            <p class="lead">Camping- Where Friends & Marshmallows Get Toasted At The Same Time.</p>
+            <a href="/camps/new" class="btn btn-outline-light btn-lg">add new camp</a>     
+        </div>
+    </div>
+
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% camps.forEach(function(camp){ %>
+            <div class="col-md-6 col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="<%= camp.image %>" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= camp.name.toUpperCase() %></h5>
+                    </div>
+                    <a href="/camps/<%= camp._id %>" class="btn btn-dark">show more..</a>
+                </div>                
+            </div> 
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %> 

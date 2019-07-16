@@ -1,0 +1,40 @@
+body {
+    font-family: roboto;
+}
+
+#camptitle {
+    font-family: QUICKSAND;
+}
+
+.jumbotron{
+	background-image: url('https://coverfiles.alphacoders.com/312/31233.jpg');
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -100px;
+    color: #FFF;
+}
+
+.thumbnail img{
+    width: 100%;
+}
+
+nav {
+    margin-bottom: 25px;
+}
+
+.delete_form {
+    display: inline;
+}
+
+.thumbnail {
+    border: 1px solid #c7c7c7;
+    padding: 0;
+}
+
+#addcomment {
+    margin-top: 15px;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
